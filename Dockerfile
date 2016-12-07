@@ -62,6 +62,9 @@ echo /var/lock/apache2 > /etc/container_environment/APACHE_LOCK_DIR && \
 echo /var/run/apache2.pid > /etc/container_environment/APACHE_PID_FILE && \
 echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
 
+# Enable mod rewrite
+RUN a2enmod rewrite
+
 # Expose Ports
 EXPOSE 80 443
 
